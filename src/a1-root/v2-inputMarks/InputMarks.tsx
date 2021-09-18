@@ -17,7 +17,7 @@ export const getTag = (title: string)=>{
     let tag: string[] = []
     valueInput.map((i, index)=>{
         if(index % 2 !== 0){
-            tag.push(i.replace('#',''))
+           return  tag.push(i.replace('#',''))
         }
     })
     return tag

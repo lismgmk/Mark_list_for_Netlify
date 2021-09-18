@@ -1,6 +1,4 @@
-import {Dispatch} from "react";
 import {nanoid} from 'nanoid'
-import {AppRootStateType} from "../App/store";
 
 const initialState = {
     marks: []
@@ -41,7 +39,7 @@ export const mainReduser =
                 let current: MarksType[] = []
                 state.marks.map((i, index) => {
                     if (i.tag.includes(action.tag) && i.tag.length === 1) {
-                        current.push(state.marks[index])
+                       return current.push(state.marks[index])
                     }
                 })
                 if (current) {
@@ -78,11 +76,6 @@ export const actionsMain = {
         type: "MAIN/RENAME-MARK",
         nameMark, id, tag
     } as const)
-};
-
-// thunk
-export const initializeApp = () => async (dispatch: Dispatch<any>, getState: () => AppRootStateType) => {
-    let data = JSON.stringify(getState())
 };
 
 

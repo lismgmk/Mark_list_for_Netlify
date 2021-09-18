@@ -4,7 +4,7 @@ import {Mark} from "../v3-Mark/Mark";
 import {Button, Chip, Container, Grid, IconButton, Paper, TextField} from "@material-ui/core";
 import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType} from "../App/store";
-import {actionsMain, initializeApp, MarksType} from "../Redusers/mainReduser";
+import {actionsMain, MarksType} from "../Redusers/mainReduser";
 import {nanoid} from "nanoid";
 import {actionsTags} from "../Redusers/tagsReduser";
 import {Clear} from "@material-ui/icons";
@@ -22,8 +22,7 @@ function Main() {
 
     useEffect(() => {
         setCurrentmarks(marks)
-        dispatch(initializeApp())
-    }, [marks])
+    }, [marks, dispatch])
 
     const deleteTagWithMark = (t: string) => {
         dispatch(actionsMain.deleteMarkTag(t))
