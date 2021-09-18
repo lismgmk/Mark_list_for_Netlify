@@ -18,8 +18,11 @@ export const getTag = (title: string)=>{
     valueInput.map((i, index)=>{
         if(index % 2 !== 0){
            return  tag.push(i.replace('#',''))
+        } else{
+            return
         }
     })
+
     return tag
 }
 export const InputMarks = React.memo(function (){

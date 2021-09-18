@@ -38,7 +38,7 @@ export const mainReduser =
             case "MAIN/DELETE-MARK-TAG":
                 let current: MarksType[] = []
                 state.marks.map((i, index) => {
-                    if (i.tag.includes(action.tag) && i.tag.length === 1) {
+                   if (i.tag.includes(action.tag) && i.tag.length === 1) {
                        return current.push(state.marks[index])
                     }
                 })
@@ -48,7 +48,7 @@ export const mainReduser =
                         marks: state.marks.filter(m => m !== current[current.indexOf(m)])
                     }
                 }
-                return state;
+               else {return state}
 
 
             default:
