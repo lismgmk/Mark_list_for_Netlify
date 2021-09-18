@@ -1,0 +1,26 @@
+.customInput {
+    outline: black;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+    caret-color: black;
+    font-size: 1.5rem;
+    width: 800px;
+    position: absolute;
+    z-index: 3;
+    height: fit-content;
+}
+
+.customDiv {
+    font-size: 18px;
+    width: 800px;
+    height: 40px;
+    border-bottom: 1px solid black;
+}
+
+.containerCustom {
+    background-color: yellow;
+    margin: 20px;
+    width: 620px;
+    height: 85px;
+}
