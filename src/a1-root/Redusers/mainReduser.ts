@@ -37,7 +37,7 @@ export const mainReduser =
                 };
             case "MAIN/DELETE-MARK-TAG":
                 let current: MarksType[] = []
-                state.marks.map((i, index) => {
+                state.marks.forEach((i, index) => {
                    if (i.tag.includes(action.tag) && i.tag.length === 1) {
                        return current.push(state.marks[index])
                     }

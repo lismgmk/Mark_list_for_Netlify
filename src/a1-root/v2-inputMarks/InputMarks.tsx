@@ -15,11 +15,9 @@ export const getTag = (title: string)=>{
     let valueInput = title.split(/(#[a-z\d-]+)/ig)
 
     let tag: string[] = []
-    valueInput.map((i, index)=>{
+    valueInput.forEach((i, index)=>{
         if(index % 2 !== 0){
            return  tag.push(i.replace('#',''))
-        } else{
-            return
         }
     })
 
